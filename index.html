@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog - Seu Portal de Tecnologia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Tech<span>Blog</span></div>
+                <div class="menu-toggle">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li class="login-btn"><a href="login.html">Login / Cadastro</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>As últimas novidades em tecnologia</h1>
+            <p>Acompanhe as notícias, tutoriais e reviews mais recentes do mundo da tecnologia em um só lugar.</p>
+            <a href="#artigos" class="btn">Explorar Artigos</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" id="artigos">
+        <div class="main-content">
+            <div class="posts">
+                <!-- Posts serão gerados dinamicamente pelo JavaScript -->
+                <div id="posts-container"></div>
+                
+                <!-- Paginação -->
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">Próximo »</a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Search Widget -->
+                <div class="widget">
+                    <h3 class="widget-title">Pesquisar</h3>
+                    <form id="search-form">
+                        <input type="text" id="search-input" placeholder="Buscar artigos...">
+                        <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- Login/Register Widget (aparece apenas para não logados) -->
+                <div class="widget" id="login-widget">
+                    <h3 class="widget-title">Área do Usuário</h3>
+                    <p>Faça login para comentar e salvar seus artigos favoritos.</p>
+                    <a href="login.html" class="btn">Entrar</a>
+                    <a href="cadastro.html" class="btn btn-outline">Cadastrar</a>
+                </div>
+
+                <!-- User Widget (aparece apenas para logados) -->
+                <div class="widget" id="user-widget" style="display: none;">
+                    <h3 class="widget-title">Olá, <span id="user-name">Usuário</span></h3>
+                    <ul class="user-menu">
+                        <li><a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                        <li><a href="favoritos.html"><i class="fas fa-heart"></i> Favoritos</a></li>
+                        <li><a href="meus-comentarios.html"><i class="fas fa-comments"></i> Meus Comentários</a></li>
+                        <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+                    </ul>
+                </div>
+
+                <!-- Popular Posts Widget -->
+                <div class="widget popular-posts">
+                    <h3 class="widget-title">Posts Populares</h3>
+                    <div id="popular-posts-container">
+                        <!-- Será preenchido pelo JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="widget categories">
+                    <h3 class="widget-title">Categorias</h3>
+                    <ul id="categories-list">
+                        <!-- Será preenchido pelo JavaScript -->
+                    </ul>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="widget newsletter">
+                    <h3 class="widget-title">Newsletter</h3>
+                    <p>Inscreva-se para receber as últimas notícias sobre tecnologia.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Seu email" required>
+                        <button type="submit" class="btn">Inscrever-se</button>
+                    </form>
+                </div>
+
+                <!-- Social Media Widget -->
+                <div class="widget social-widget">
+                    <h3 class="widget-title">Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Sobre Nós</h3>
+                    <p>TechBlog é o seu portal de notícias, tutoriais e análises sobre o mundo da tecnologia.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categorias</h3>
+                    <ul id="footer-categories">
+                        <!-- Será preenchido pelo JavaScript -->
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@techblog.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, Brasil</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 TechBlog. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modais -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <!-- Conteúdo do modal de login -->
+        </div>
+    </div>
+
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Compartilhar</h2>
+            <!-- Conteúdo do modal de compartilhamento -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/posts.js"></script>
+</body>
+</html>

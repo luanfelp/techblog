@@ -1,0 +1,140 @@
+/* Responsive Styles */
+
+/* Large devices (desktops, up to 1200px) */
+@media (max-width: 1200px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium devices (tablets, up to 992px) */
+@media (max-width: 992px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Small devices (landscape phones, up to 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        position: relative;
+    }
+
+    .logo {
+        z-index: 101;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 101;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        margin-left: 0;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .post-title {
+        font-size: 1.2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+    }
+}
+
+/* Extra small devices (portrait phones, up to 576px) */
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+
+    .post-card {
+        margin-bottom: 20px;
+    }
+
+    .post-image {
+        height: 180px;
+    }
+
+    .post-content {
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .widget {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .single-post-title {
+        font-size: 1.8rem;
+    }
+
+    .post-meta, .single-post-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
